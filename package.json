@@ -11,11 +11,18 @@
     },
     "devDependencies": {
         "axios": "^0.17",
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-preset-env": "^1.6.1",
         "bootstrap-sass": "^3.3.7",
         "cross-env": "^5.1",
         "jquery": "^3.2",
         "laravel-mix": "^1.0",
         "lodash": "^4.17.4",
-        "vue": "^2.5.7"
+        "vue": "^2.5.7",
+        "webpack": "^3.9.1"
+    },
+    "dependencies": {
+        "global-gulp": "0.0.0"
     }
 }
