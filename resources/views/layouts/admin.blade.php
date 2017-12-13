@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}">
 </head>
 <body>
 
@@ -20,7 +20,7 @@
     <!-- Sidebar Holder -->
     <nav id="sidebar">
         <div class="sidebar-header">
-            <h3>Bootstrap Sidebar</h3>
+            <h3>پنل مدیریت</h3>
         </div>
 
         <ul class="list-unstyled components">
@@ -36,8 +36,8 @@
             <li class="active">
                 <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> <span class="rtl">کاربران</span></a>
                 <ul class="collapse list-unstyled" id="userSubmenu">
-                    <li><a href="#">کاربر 1</a></li>
-                    <li><a href="#">کاربر 2</a></li>
+                    <li><a href="{{url('admin/users/')}}">کاربران</a></li>
+                    <li><a href="{{url('admin/users/create')}}">ایجاد کاربر جدید</a></li>
                     <li><a href="#">کاربر 3</a></li>
                 </ul>
             </li>
@@ -94,9 +94,8 @@
             </div>
         </nav>
 
-
         @yield('content')
-
+        </div>
         @yield('footer')
 
 

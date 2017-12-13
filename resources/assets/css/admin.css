@@ -10,6 +10,7 @@
 
 }
 
+
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
@@ -62,8 +63,8 @@ a, a:hover, a:focus {
 }
 
 #sidebar {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 100px;
+    max-width: 100px;
     background: #252538;
     color: #fff;
     transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
@@ -162,6 +163,7 @@ a.article, a.article:hover {
     min-height: 100vh;
     transition: all 0.3s;
     margin-right: 0px;
+
 }
 
 #sidebarCollapse {
