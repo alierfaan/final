@@ -32,8 +32,8 @@
 
         <div class="form-group">
 
-            <label for="pwd"><span>پسورد</span></label>
-            <input name="pwd" type="password" class="text-left input-lg" id="pwd">
+            <label for="password"><span>پسورد</span></label>
+            <input name="password" type="password" class="text-left input-lg" id="pwd">
 
         </div>
         <div class="form-group">

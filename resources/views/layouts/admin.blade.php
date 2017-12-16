@@ -37,7 +37,7 @@
                 <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> <span class="rtl">کاربران</span></a>
                 <ul class="collapse list-unstyled" id="userSubmenu">
                     <li><a href="{{url('admin/users/')}}">کاربران</a></li>
-                    <li><a href="{{url('admin/users/create')}}">ایجاد کاربر جدید</a></li>
+                    <li><a href="{{url('admin/users/create/')}}">ایجاد کاربر جدید</a></li>
                     <li><a href="#">کاربر 3</a></li>
                 </ul>
             </li>
