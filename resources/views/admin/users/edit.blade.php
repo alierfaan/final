@@ -80,11 +80,20 @@
 
         <div class="form-group">
 
-            <input name="update" type="submit" class="btn btn-primary">
+            <input name="update" type="submit" class="btn btn-primary left">
 
         </div>
 
-        @if(count($errors) > 0 )
+        <form action="{{ action('AdminUsersController@destroy' , $user->id) }}" accept-charset="UTF-8" method="POST" enctype="multipart/form-data">
+            <input name="_method" type="hidden" value="DELETE">
+            {{ csrf_field() }}
+            <div class="form-group">
+            <input type="submit" name="DELETE" value="Delete"  class="btn btn-danger left">
+            </div>
+        </form>
+
+
+    @if(count($errors) > 0 )
             <div class="alert alert-danger">
 
                 <ul>

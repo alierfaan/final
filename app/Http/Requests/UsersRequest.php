@@ -25,7 +25,7 @@ class UsersRequest extends FormRequest
     {
         return [
            'name'=>'required',
-           'pwd'=>'required',
+           'password'=>'required',
             'email'=>'required',
             'role_id'=>'required',
             'is_active'=>'required',

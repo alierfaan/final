@@ -2,7 +2,10 @@
 @extends('layouts.admin');
 
 @section('content')
+@if(\Illuminate\Support\Facades\Session::has('deleted_user'))
+<p class="bg-danger">کاربر با موفقیت حذف شد</p>
 
+  @endif
     <div class="table-responsive">
       <table class="table">
         <thead>
