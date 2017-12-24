@@ -15,6 +15,10 @@
                  <label for="category"><span>پسورد</span></label>
                  <select id="category" name="category_id" class="text-left input-lg" id="category">
                      <option disabled selected>انتخاب دسته</option>
+                     @foreach($categories as $category)
+                     <option value="{{$category->id}}">{{$category->name}}</option>
+                     @endforeach
+
                  </select>
 
              </div>
