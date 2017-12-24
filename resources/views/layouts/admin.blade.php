@@ -49,6 +49,14 @@
                     <li><a href="#">گزارش 3</a></li>
                 </ul>
             </li>
+            <li class="active">
+                <a href="#postSubmenu" data-toggle="collapse" aria-expanded="false"><span class="glyphicon glyphicon-save-file"></span> <span class="rtl">پست</span></a>
+                <ul class="collapse list-unstyled" id="postSubmenu">
+                    <li><a href="{{url('admin/posts/')}}">پست ها</a></li>
+                    <li><a href="{{url('admin/posts/create/')}}">ایجاد پست جدید</a></li>
+
+                </ul>
+            </li>
             <li>
                 <a href="#">Portfolio</a>
             </li>

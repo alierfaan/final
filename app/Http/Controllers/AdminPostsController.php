@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PostsCreateRequest;
 use Illuminate\Http\Request;
+use App\Post;
+use App\Photo;
+use Illuminate\Support\Facades\Auth;
 
-class AdminPostController extends Controller
+class AdminPostsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +17,8 @@ class AdminPostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::all();
+        return view('admin.posts.index', compact('posts'));
     }
 
     /**
@@ -23,7 +28,7 @@ class AdminPostController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.posts.create');
     }
 
     /**
@@ -32,9 +37,28 @@ class AdminPostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostsCreateRequest $request)
     {
-        //
+
+        $user = Auth::user();
+        $input = $request->all();
+
+        if($file = $request->file('photo_id')){
+
+            /** @var TYPE_NAME $name */
+            $name = time() . $file->getClientOriginalName();
+            $file->move('images',$name);
+            $photo = Photo::create(['file'=>$name]);
+            $input['photo_id'] = $photo->id;
+
+
+        }
+        $input['category_id'] = 1;
+        $user->post()->create($input);
+        return redirect('admin/posts');
+
+
+
     }
 
     /**
